@@ -514,8 +514,8 @@ export default function App() {
             <h2>Let's talk about what you need.</h2>
             <p>Have a question, want to place a bulk order, or just want to know what's in stock? Reach out — we're happy to help.</p>
             <div className="contact-details">
-              <div>📧 hello@mobiverse.com</div>
-              <div>📞 +256 700 000 000</div>
+              <div>📧 phillipnyinomujuni3@gmail.com</div>
+              <div>📞 +256 791 111 915</div>
               <div>📍 Kampala, Uganda</div>
             </div>
           </div>
