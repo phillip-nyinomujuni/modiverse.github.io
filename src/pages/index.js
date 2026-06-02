@@ -6,15 +6,15 @@ const styles = `
   body { font-family: 'DM Sans', sans-serif; background: #fff; color: #0a0a0a; }
 
   /* NAV */
-  .mobi-nav {
+  .modi-nav {
     position: sticky; top: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 48px;
     background: #fff;
     border-bottom: 1px solid #e0eeff;
   }
-  .mobi-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: .05em; color: #0057ff; }
-  .mobi-logo span { color: #00c6ff; }
+  .modi-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: .05em; color: #0057ff; }
+  .modi-logo span { color: #00c6ff; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a { text-decoration: none; font-size: .85rem; font-weight: 500; letter-spacing: .06em; color: #333; transition: color .2s; }
   .nav-links a:hover { color: #0057ff; }
@@ -264,7 +264,7 @@ const styles = `
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    .mobi-nav { padding: 18px 24px; }
+    .modi-nav { padding: 18px 24px; }
     .nav-links, .nav-cta { display: none; }
     .nav-hamburger { display: block; }
     .hero-inner { grid-template-columns: 1fr; padding: 60px 24px; gap: 48px; }
@@ -334,7 +334,7 @@ const featureCards = [
 ];
 
 const testimonials = [
-  { stars: "★★★★★", text: "Great quality cases! My phone has survived two drops already. MOBiverse is my go-to shop.", author: "— Brian K., Kampala" },
+  { stars: "★★★★★", text: "Great quality cases! My phone has survived two drops already. MODiverse is my go-to shop.", author: "— Brian K., Kampala" },
   { stars: "★★★★★", text: "Fast delivery and the charger works perfectly. Very happy with my order. Will definitely buy again.", author: "— Sandra M., Entebbe" },
   { stars: "★★★★☆", text: "Affordable prices and genuine products. The screen protector fits perfectly. Highly recommended!", author: "— David O., Jinja" },
 ];
@@ -356,8 +356,8 @@ export default function App() {
       <style>{styles}</style>
 
       {/* NAV */}
-      <nav className="mobi-nav">
-        <div className="mobi-logo">MOBi<span>verse</span></div>
+      <nav className="modi-nav">
+        <div className="modi-logo">MODi<span>verse</span></div>
         <ul className="nav-links">
           {["About", "Products", "Reviews", "Contact"].map(l => (
             <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>
@@ -386,7 +386,7 @@ export default function App() {
               Gear Up.<br />
               Stay <span>Connected.</span>
             </h1>
-            <p className="hero-sub">MOBiverse Limited brings you top-quality phone accessories — cases, chargers, cables, and more — built for everyday life in Uganda and beyond.</p>
+            <p className="hero-sub">MODiverse Limited brings you top-quality phone accessories — cases, chargers, cables, and more — built for everyday life in Uganda and beyond.</p>
             <div className="hero-actions">
               <a href="#products" className="btn btn-primary">Browse Products</a>
               <a href="#contact" className="btn btn-outline">Get in Touch</a>
@@ -410,7 +410,7 @@ export default function App() {
             {/* Central phone */}
             <div className="phone-mockup">
               <div className="phone-screen-icon">📱</div>
-              <div className="phone-screen-text">MOBiverse</div>
+              <div className="phone-screen-text">MODiverse</div>
             </div>
 
             {/* Floating gadget cards */}
@@ -453,7 +453,7 @@ export default function App() {
           <div className="about-text">
             <div className="label">Who We Are</div>
             <h2>Your one-stop shop for every phone accessory.</h2>
-            <p>At MOBiverse Limited, we believe your phone should work as hard as you do. That's why we stock only the best accessories — protective cases, fast chargers, cables, screen protectors, stands, and more.</p>
+            <p>At MODiverse Limited, we believe your phone should work as hard as you do. That's why we stock only the best accessories — protective cases, fast chargers, cables, screen protectors, stands, and more.</p>
             <p>Whether you're upgrading, protecting, or powering up, we've got you covered.</p>
           </div>
           <div className="about-cards">
@@ -532,13 +532,43 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <div className="footer-logo">MOBi<span>verse</span> Limited</div>
-        <p>© {new Date().getFullYear()} MOBiverse Limited. All rights reserved.</p>
+        <div className="footer-logo">MODi<span>verse</span> Limited</div>
+        <p>© {new Date().getFullYear()} MODiverse Limited. All rights reserved.</p>
         <div className="footer-links">
           {["About", "Products", "Contact"].map(l => (
             <a key={l} href={`#${l.toLowerCase()}`}>{l}</a>
           ))}
         </div>
+
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/256791111915"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            marginTop: '24px',
+            padding: '12px 24px',
+            background: '#25d366',
+            color: '#fff',
+            borderRadius: '999px',
+            textDecoration: 'none',
+            fontWeight: '600',
+            fontSize: '.85rem',
+            letterSpacing: '.04em',
+            boxShadow: '0 4px 20px rgba(37,211,102,0.4)',
+            transition: 'all .2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = '#1ebe57'}
+          onMouseLeave={e => e.currentTarget.style.background = '#25d366'}
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
       </footer>
     </>
   );
